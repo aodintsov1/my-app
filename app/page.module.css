@@ -1,0 +1,113 @@
+/* app/page.module.css */
+
+/* Global wrapper: full viewport height, light background */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+  font-family: Arial, sans-serif;
+}
+
+/* Header: dark bar, logo on left, nav on right */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #020000;
+  padding: 1rem 2rem;
+}
+.logo #wsite-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.nav .menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav .menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.nav .active a {
+  border-bottom: 2px solid #88a3e8;
+}
+
+/* Main content area */
+.content {
+  flex: 1;
+  max-width: 960px;
+  margin: 2rem auto;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Intro section: center text */
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.intro p {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Experience & Projects: two-column grid */
+.experience, .projects {
+  margin-bottom: 4rem;
+}
+.experience h2, .projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.cards div {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.cards h3 {
+  font-size: 1.125rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.cards ul {
+  list-style: disc inside;
+  margin: 0;
+  padding-left: 1rem;
+  color: #555;
+}
+
+/* Slideshow placeholder: maintain aspect ratio */
+.slideshow {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect */
+  background: #ddd;
+  border-radius: 0.5rem;
+}
+
+/* Footer: simple centered text */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #020000;
+  color: #fff;
+  font-size: 0.875rem;
+}
