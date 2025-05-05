@@ -1,113 +1,143 @@
-/* app/page.module.css */
-
-/* Global wrapper: full viewport height, light background */
+/* Wrapper for entire page */
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #ffffff;
-  color: #111111;
   font-family: Arial, sans-serif;
 }
 
-/* Header: dark bar, logo on left, nav on right */
+/* Header: center title + nav, white background */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #020000;
-  padding: 1rem 2rem;
+  background-color: white;
+  padding: 2rem 1rem 0.5rem;
+  text-align: center;
+  color: #2a2a2a;
 }
+
+/* Logo/title */
 .logo #wsite-title {
-  color: #ffffff;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
+  font-size: 5rem;
+  letter-spacing: 0.05em;
+  color: #2a2a2a;
 }
-.nav .menu {
-  display: flex;
-  gap: 1.5rem;
+
+/* Navigation */
+.nav {
+  margin-bottom: 1rem;
+}
+.menu {
   list-style: none;
+  display: inline-flex;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
-.nav .menu a {
-  color: #ffffff;
+.menu li a {
   text-decoration: none;
-  font-size: 1rem;
+  color: #2a2a2a;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
-.nav .active a {
-  border-bottom: 2px solid #88a3e8;
+.menu li a.active {
+  font-weight: 700;
 }
-
-/* Main content area */
-.content {
-  flex: 1;
-  max-width: 960px;
-  margin: 2rem auto;
-  width: 100%;
-  padding: 0 1rem;
+.menu li a:hover {
+  text-decoration: underline;
 }
 
-/* Intro section: center text */
+/* Intro section */
 .intro {
+  background-color: white;
+  color: black;
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 1rem 2rem;
 }
 .intro h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 .intro p {
-  font-size: 1.25rem;
-  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-/* Experience & Projects: two-column grid */
-.experience, .projects {
-  margin-bottom: 4rem;
+/* Social icons */
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
-.experience h2, .projects h2 {
+.socialIcons a {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 0.5rem;
+  color: #333;
+  transition: color 0.2s ease;
 }
+.socialIcons a:hover {
+  color: #0070f3;
+}
+
+/* Experience and Projects sections */
+.experience,
+.projects {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+.experience h2,
+.projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Cards */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
-.cards div {
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-.cards h3 {
-  font-size: 1.125rem;
-  margin-top: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-.cards ul {
-  list-style: disc inside;
-  margin: 0;
-  padding-left: 1rem;
-  color: #555;
-}
-
-/* Slideshow placeholder: maintain aspect ratio */
-.slideshow {
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect */
-  background: #ddd;
-  border-radius: 0.5rem;
-}
-
-/* Footer: simple centered text */
-.footer {
+.cards > div {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 300px;
   text-align: center;
-  padding: 1rem;
-  background: #020000;
-  color: #fff;
-  font-size: 0.875rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+.cards > div:hover {
+  transform: translateY(-5px);
+}
+.cards img {
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 6px;
+}
+
+/* Slideshow placeholder */
+.slideshow {
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.bulletList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: white;
+}
+
+.bulletItem {
+  margin-bottom: 0.5rem;
+  color: white;
 }

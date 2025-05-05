@@ -1,0 +1,37 @@
+.container {
+    padding: 2rem;
+    color: white;
+    background-color: #000;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .slideshow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .imageWrapper {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .arrow {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .arrow:hover {
+    transform: scale(1.1);
+  }
+  

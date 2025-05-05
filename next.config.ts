@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   basePath: process.env.NODE_ENV === "production" ? "/my-app" : "",
   assetPrefix: process.env.NODE_ENV === "production" ? "/my-app/" : "",
+  images: {
+    unoptimized: true,
+  },
   /* config options here */
 };
 
