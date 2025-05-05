@@ -130,18 +130,14 @@ export default function Page() {
           <h2>Projects</h2>
           <div className={styles.cards}>
             <div>
-              <a
-                href="/projects/athenaeum"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="/projects/athenaeum">
                 <Image
                   src="https://alexanderodintsov.weebly.com/uploads/1/5/1/3/151373715/editor/dapxcm.png"
                   alt="Athenaeum"
                   width={240}
                   height={240}
                 />
-              </a>
+              </Link>
               <h3>Athenaeum (Programmer)</h3>
               <ul className={styles.bulletList}>
                 <li className={styles.bulletItem}>
