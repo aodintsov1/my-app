@@ -34,7 +34,7 @@ export default function Page() {
           <div className={styles.cards}>
             <div>
               <a href="https://f84.com/" target="_blank" rel="noreferrer">
-                <Image src="/images/logo-2x_orig.png" alt="F84 Games" width={240} height={80} />
+                <Image src="/logo-2x_orig.png" alt="F84 Games" width={240} height={80} />
               </a>
               <h3>F84 Games (Software Engineer Intern)</h3>
               <ul>
