@@ -17,7 +17,7 @@ export default function Page() {
     <div className={styles.wrapper}>
       <header className={styles.header}>
         <div className={`${styles.logo} ${playfair.className}`}>
-          <span id="wsite-title">Alexander Odintsov</span>
+          <span id="wsite-title">ALEXANDER ODINTSOV</span>
         </div>
 
         <nav className={styles.nav}>
@@ -27,14 +27,17 @@ export default function Page() {
                 Home
               </Link>
             </li>
-            <li>
-              <Link
-                href="/resume"
-                className={pathname === "/resume" ? styles.active : ""}
-              >
-                Resume
-              </Link>
-            </li>
+            {/*
+<li>
+  <Link
+    href="/resume"
+    className={pathname === "/resume" ? styles.active : ""}
+  >
+    Resume
+  </Link>
+</li>
+*/}
+
             <li>
               <Link
                 href="/about"
@@ -83,16 +86,21 @@ export default function Page() {
                   height={80}
                 />
               </a>
-              <h3>F84 Games (Software Engineer Intern)</h3>
+              <h3>
+                <a href="https://f84.com/" target="_blank" rel="noopener noreferrer">
+                  F84 Games
+                </a>
+                <span> (Software Engineer Intern)</span>
+              </h3>
               <ul className={styles.bulletList}>
                 <li className={styles.bulletItem}>
-                  Contributed to a multiplayer sports game in Roblox Studio using Lua
+                  Contributed to the development of an unannounced multiplayer sports game for a nationally recognized sports brand in Roblox Studio using Lua
                 </li>
                 <li className={styles.bulletItem}>
-                  Programmed gameplay mechanics, client-server architecture, and UI components
+                  Programmed gameplay mechanics, client-server architecture, and UI components to enhance player experience
                 </li>
                 <li className={styles.bulletItem}>
-                  Collaborated with artists to translate assets into GUI
+                  Worked with artists and designers to translate art assets into the game's GUI
                 </li>
               </ul>
             </div>
@@ -110,16 +118,25 @@ export default function Page() {
                   height={80}
                 />
               </a>
-              <h3>Resilience, Inc. (App Developer)</h3>
+              <h3>
+                <a href="https://mylearningtools.org/" target="_blank" rel="noopener noreferrer">
+                  Resilience, Inc.
+                </a>
+                <span> (App Developer)</span>
+              </h3>
               <ul className={styles.bulletList}>
                 <li className={styles.bulletItem}>
-                  Wrote clean, efficient JS/TS code for mobile platforms with React Native
+                  Write clean and efficient code for iOS and Android platforms in JavaScript and TypeScript using React
+                  Native
                 </li>
                 <li className={styles.bulletItem}>
-                  Collaborated on features optimizing user experience and performance
+                  Collaborate with the App Development team to implement features for mobile platforms
                 </li>
                 <li className={styles.bulletItem}>
-                  Deployed updates to App Store and Google Play
+                  Implement new elements into applications that optimize user experience and app performance
+                </li>
+                <li className={styles.bulletItem}>
+                  Deploy app updates to the App Store and Google Play, ensuring compliance with platform guidelines
                 </li>
               </ul>
             </div>
@@ -130,69 +147,57 @@ export default function Page() {
           <h2>Projects</h2>
           <div className={styles.cards}>
             <div>
-              <Link href="/projects/athenaeum">
+              <a
+                href="/my-app/projects/athenaeum"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="https://alexanderodintsov.weebly.com/uploads/1/5/1/3/151373715/editor/dapxcm.png"
                   alt="Athenaeum"
                   width={240}
                   height={240}
                 />
-              </Link>
-              <h3>Athenaeum (Programmer)</h3>
-              <ul className={styles.bulletList}>
-                <li className={styles.bulletItem}>
-                  Co-developed a roguelike deck-building game in Unity (C#)
-                </li>
-                <li className={styles.bulletItem}>
-                  Implemented cards, abilities, and UI highlights
-                </li>
-                <li className={styles.bulletItem}>
-                  Presented at UCSD Triton Gaming Expo 2024
-                </li>
-              </ul>
-            </div>
-            <div className={styles.slideshow}>
-              {/* Slideshow goes here */}
+              </a>
+              <h3 className={styles.projectTitle}>
+                <strong>Athenaeum</strong> <span className={styles.projectRole}>(Programmer)</span>
+              </h3>
+              <p className={styles.itchLink}>
+                <a
+                  href="https://ethancreek.itch.io/athenaeum"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Itch.io
+                </a>
+              </p>
             </div>
           </div>
 
           <div className={styles.cards}>
             <div>
-              <a
-                href="https://aodintsov1.itch.io/green-guy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="https://alexanderodintsov.weebly.com/uploads/1/5/1/3/151373715/editor/screenshot-6534.png"
-                  alt="Green Guy: Shapeshifter"
-                  width={240}
-                  height={240}
-                />
-              </a>
-              <h3>Green Guy: Shapeshifter (Programmer)</h3>
-              <ul className={styles.bulletList}>
-                <li className={styles.bulletItem}>
-                  Developed stealth game in Unity (C#) for TritonWare Spring 2024
-                </li>
-                <li className={styles.bulletItem}>
-                  Implemented mechanics and level design
-                </li>
-                <li className={styles.bulletItem}>
-                  Showcased at UCSD Triton Gaming Expo 2024
-                </li>
-              </ul>
-            </div>
-            <div className={styles.slideshow}>
-              {/* Slideshow goes here */}
+              <Image
+                src="https://alexanderodintsov.weebly.com/uploads/1/5/1/3/151373715/editor/screenshot-6534.png"
+                alt="Green Guy: Shapeshifter"
+                width={240}
+                height={240}
+              />
+              <h3 className={styles.projectTitle}>
+                <strong>Green Guy: Shapeshifter</strong> <span className={styles.projectRole}>(Programmer)</span>
+              </h3>
+              <p className={styles.itchLink}>
+                <a
+                  href="https://aodintsov1.itch.io/green-guy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Itch.io
+                </a>
+              </p>
             </div>
           </div>
         </section>
       </main>
-
-      <footer className={styles.footer}>
-        <p>Powered by Weebly</p>
-      </footer>
     </div>
   );
 }

@@ -28,10 +28,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav style={{ margin: "1rem" }}>
-          <Link href="/">Home</Link>{" "}
-          <Link href="/about">About</Link>
-        </nav>
         {children}
       </body>
     </html>

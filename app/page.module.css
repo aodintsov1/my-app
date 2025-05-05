@@ -12,11 +12,13 @@
   padding: 2rem 1rem 0.5rem;
   text-align: center;
   color: #2a2a2a;
+  font-size: 3rem; 
+  /*delete above???*/
 }
 
 /* Logo/title */
 .logo #wsite-title {
-  font-size: 5rem;
+  font-size: 10rem;
   letter-spacing: 0.05em;
   color: #2a2a2a;
 }
@@ -81,15 +83,23 @@
 /* Experience and Projects sections */
 .experience,
 .projects {
-  background-color: #000;
-  color: #fff;
-  padding: 4rem 2rem;
-}
-.experience h2,
-.projects h2 {
-  text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
+  padding-left: 1rem;
+}
+
+.experience h2,
+.projects h2 {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  font-size: 2rem;
+}
+
+.experience h3,
+.projects h3 {
+  font-size: 1rem;
 }
 
 /* Cards */
@@ -104,7 +114,7 @@
   border-radius: 12px;
   padding: 1.5rem;
   max-width: 300px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
 }
@@ -140,4 +150,21 @@
 .bulletItem {
   margin-bottom: 0.5rem;
   color: white;
+  font-size: 1rem;
+}
+
+.projectTitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.projectRole {
+  font-weight: normal;
+}
+
+.itchLink {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0;
 }

@@ -1,29 +1,108 @@
-// app/about/page.tsx
 "use client";
 
-import { useState } from "react";
+import React from "react";
+import styles from "./page.module.css";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function AboutPage() {
-    const [count, setCount] = useState(0);
-
+    const pathname = usePathname();
     return (
-        <main style={{ padding: "1rem" }}>
-            <h1>About This App</h1>
-            <p>This site is deployed via GitHub Pages.</p>
-            <button
-                onClick={() => setCount(count + 1)}
-                style={{
-                    padding: "0.5rem 1rem",
-                    backgroundColor: "#2563eb", 
-                    color: "#ffffff",
-                    border: "none",
-                    borderRadius: "0.375rem", 
-                    cursor: "pointer",
-                    fontWeight: "bold",
-                }}
-            >
-                Clicked {count} {count === 1 ? "time" : "times"}
-            </button>
+        <main className={styles.wrapper}>
+            <nav className={styles.nav}>
+                <ul className={styles.menu}>
+                    <li>
+                        <Link href="/" className={pathname === "/" ? styles.active : ""}>
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/about" className={pathname === "/about" ? styles.active : ""}>
+                            About
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+
+            <section className={styles.headerSpacer} />
+
+            <section className={styles.contentSection}>
+                <div className={styles.inner}>
+                    <h1 className={styles.title}>About</h1>
+
+                    <p className={styles.intro}>
+                        I’m a Software Engineer passionate about programming games
+                    </p>
+
+                    <ul className={styles.list}>
+                        <li>
+                            I am currently attending the University of California, San Diego
+                            majoring in Cognitive Science with a Specialization in Design and
+                            Interaction for a Bachelor’s Degree.
+                        </li>
+                        <li>
+                            Companies I have worked for:
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://f84.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.link}
+                                    >
+                                        F84 Games
+                                    </a>{" "}
+                                    (Software Engineer Intern)
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://mylearningtools.org/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.link}
+                                    >
+                                        Resilience, Inc.
+                                    </a>{" "}
+                                    (App Developer)
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Projects I have worked on:
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://ethancreek.itch.io/athenaeum"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.link}
+                                    >
+                                        Athenaeum
+                                    </a>{" "}
+                                    is a roguelike deck-building card game on Windows and MacOS
+                                    where players expand their collection of cards as they
+                                    venture through a mysterious library. (Programmer and Game
+                                    Designer)
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://aodintsov1.itch.io/green-guy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.link}
+                                    >
+                                        Green Guy: ShapeShifter
+                                    </a>{" "}
+                                    is a stealth game on Windows developed for the TritonWare
+                                    Spring 2024 game jam where players play as a shapeshifting
+                                    alien trying to escape a spaceship. (Programmer and Game
+                                    Designer)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </main>
     );
 }
