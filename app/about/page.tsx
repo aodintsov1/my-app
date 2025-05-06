@@ -12,19 +12,25 @@ export default function AboutPage() {
             <nav className={styles.nav}>
                 <ul className={styles.menu}>
                     <li>
-                        <Link href="/" className={pathname === "/" ? styles.active : ""}>
+                        <Link
+                            href="/"
+                            className={`${styles.menuLink} ${pathname === "/" ? styles.active : ""}`}
+                        >
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about" className={pathname === "/about" ? styles.active : ""}>
+                        <Link
+                            href="/about"
+                            className={`${styles.menuLink} ${pathname === "/about" ? styles.active : ""}`}
+                        >
                             About
                         </Link>
                     </li>
                 </ul>
             </nav>
 
-            <section className={styles.headerSpacer} />
+            <div className={styles.spacer} />
 
             <section className={styles.contentSection}>
                 <div className={styles.inner}>
