@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaEnvelope, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import styles from "./page.module.css";
 import { usePathname } from "next/navigation";
 import { Playfair_Display } from "next/font/google";
@@ -60,6 +60,14 @@ export default function Page() {
               <FaEnvelope />
             </a>
             <a
+              href="https://www.linkedin.com/in/alexander-odintsov1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+            <a
               href="https://github.com/aodintsov1"
               target="_blank"
               rel="noopener noreferrer"
@@ -82,8 +90,8 @@ export default function Page() {
                 <Image
                   src="https://alexanderodintsov.weebly.com/uploads/1/5/1/3/151373715/logo-2x_orig.png"
                   alt="F84 Games"
-                  width={240}
-                  height={80}
+                  width={480}
+                  height={160}
                 />
               </a>
               <h3>
@@ -114,8 +122,8 @@ export default function Page() {
                 <Image
                   src="https://alexanderodintsov.weebly.com/uploads/1/5/1/3/151373715/editor/resilience-inc-social-emotional-learning-programs-cover.jpg"
                   alt="Resilience, Inc."
-                  width={240}
-                  height={80}
+                  width={480}
+                  height={160}
                 />
               </a>
               <h3>
@@ -155,12 +163,13 @@ export default function Page() {
                 <Image
                   src="https://alexanderodintsov.weebly.com/uploads/1/5/1/3/151373715/editor/dapxcm.png"
                   alt="Athenaeum"
-                  width={240}
-                  height={240}
+                  width={480}
+                  height={480}
                 />
               </a>
               <h3 className={styles.projectTitle}>
-                <strong>Athenaeum</strong> <span className={styles.projectRole}>(Programmer)</span>
+                <strong>Athenaeum</strong>{" "}
+                <span className={styles.projectRole}>(Programmer)</span>
               </h3>
               <p className={styles.itchLink}>
                 <a
@@ -172,18 +181,23 @@ export default function Page() {
                 </a>
               </p>
             </div>
-          </div>
 
-          <div className={styles.cards}>
             <div>
-              <Image
-                src="https://alexanderodintsov.weebly.com/uploads/1/5/1/3/151373715/editor/screenshot-6534.png"
-                alt="Green Guy: Shapeshifter"
-                width={240}
-                height={240}
-              />
+              <a
+                href="/my-app/projects/greenguy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="https://alexanderodintsov.weebly.com/uploads/1/5/1/3/151373715/editor/screenshot-6534.png"
+                  alt="Green Guy: Shapeshifter"
+                  width={480}
+                  height={480}
+                />
+              </a>
               <h3 className={styles.projectTitle}>
-                <strong>Green Guy: Shapeshifter</strong> <span className={styles.projectRole}>(Programmer)</span>
+                <strong>Green Guy: Shapeshifter</strong>{" "}
+                <span className={styles.projectRole}>(Programmer)</span>
               </h3>
               <p className={styles.itchLink}>
                 <a
