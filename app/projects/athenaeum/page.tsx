@@ -58,8 +58,8 @@ export default function AthenaeumProjectPage() {
           <Image
             src={screenshots[current]}
             alt={`Athenaeum screenshot ${current + 1}`}
-            width={500}
-            height={300}
+            fill
+            style={{ objectFit: "cover" }}
             priority
           />
         </div>
